@@ -1,5 +1,7 @@
 package Base;
 
+import java.time.Duration;
+
 import org.apache.poi.ss.usermodel.Row;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,6 +17,8 @@ public void initialization()throws Exception {
 	WebDriverManager.chromedriver().setup();
 	 driver=new ChromeDriver();
 	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2000));
+	driver.manage().deleteAllCookies();
 	driver.get(ReadData.readPropertyFile("url"));//read excel file
 	//driver.get("https://www.saucedemo.com/");
 
