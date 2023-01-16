@@ -14,6 +14,7 @@ public class TestBase {
 	public static WebDriver driver;
 	
 public void initialization()throws Exception {
+	//launching chrome browser
 	WebDriverManager.chromedriver().setup();
 	 driver=new ChromeDriver();
 	driver.manage().window().maximize();
