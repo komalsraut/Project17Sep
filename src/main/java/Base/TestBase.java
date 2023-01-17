@@ -22,6 +22,7 @@ public void initialization()throws Exception {
 	driver.manage().deleteAllCookies();
 	driver.get(ReadData.readPropertyFile("url"));//read excel file
 	//driver.get("https://www.saucedemo.com/");
+	//komal raut
 
 }
 }
